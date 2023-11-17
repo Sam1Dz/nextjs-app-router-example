@@ -1,6 +1,6 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import ReactDOM from "react-dom";
 import Link from "next/link";
 import { CustomerField } from "@/app/lib/definitions";
 import { Button } from "@/app/ui/button";
@@ -21,7 +21,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
    * Well... maybe I should try to learn this hooks in the future :))
    */
   //@ts-ignore
-  const [state, dispatch] = useFormState(createInvoice, initialState);
+  const [state, dispatch] = ReactDOM.useFormState(createInvoice, initialState);
 
   return (
     <form action={dispatch}>

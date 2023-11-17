@@ -1,6 +1,6 @@
 "use client";
 
-import { useFormState } from "react-dom";
+import ReactDOM from "react-dom";
 import { CustomerField, InvoiceForm } from "@/app/lib/definitions";
 import {
   CheckIcon,
@@ -28,7 +28,10 @@ export default function EditInvoiceForm({
    * Well... maybe I should try to learn this hooks in the future :))
    */
   //@ts-ignore
-  const [state, dispatch] = useFormState(updateInvoiceWithId, initialState);
+  const [state, dispatch] = ReactDOM.useFormState(
+    updateInvoiceWithId,
+    initialState
+  );
 
   return (
     <form action={dispatch}>
