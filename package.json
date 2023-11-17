@@ -20,6 +20,7 @@
     "react-dom": "^18",
     "tailwindcss": "^3",
     "typescript": "^5",
+    "use-debounce": "^10",
     "zod": "^3"
   },
   "devDependencies": {
